@@ -23,8 +23,8 @@ def clean_data(file):
 
     pprint(data)
 
-    with open('data/data.json', 'w') as outfile:
+    with open('data/postprocessed.json', 'w') as outfile:
         json.dump(data, outfile)
 
 
-clean_data('data/db.json')  # location to your json file
+clean_data('data/original.json')  # location to your json file
