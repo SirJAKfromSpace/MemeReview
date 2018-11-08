@@ -1,4 +1,13 @@
 memes_original/
+
 memes_postprocess/
+
+image_vectors/
+image_vectors\
+
 .idea/
+
 memes/
+
+*.npz
+
