@@ -1,10 +1,9 @@
 memes_original/
-
 memes_postprocess/
-
 image_vectors/
-image_vectors\
+nearest_neighbors/
 
 .idea/
 
 *.npz
+*.db
