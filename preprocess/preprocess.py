@@ -27,4 +27,27 @@ def clean_data(file):
         json.dump(data, outfile)
 
 
-clean_data('data/original.json')  # location to your json file
+def format_data(file):
+    """" Formats the json data. """
+    data = []
+
+    with open(file) as f:
+        j = json.load(f)
+
+    for i in j:
+        data.append({"index": i,
+                     "id": j[str(i)]['id'],
+                     "author": j[str(i)]['author'],
+                     "thumbnail": j[str(i)]['thumbnail'],
+                     "media": j[str(i)]['media'],
+                     "upvotes": j[str(i)]['ups'],
+                     "downvotes": j[str(i)]['downs'],
+                     "date": local_time(j[str(i)]['created_utc'])})
+
+    pprint(data)
+
+    with open('data/postprocessed.json', 'w') as outfile:
+        json.dump(data, outfile)
+     
+
+format_data('data/original.json')  # location to your json file
