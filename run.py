@@ -240,13 +240,13 @@ class PixPlot:
     print(' * building 2D projection')
     if self.method == 'tsne':
       print(' * TSNE')
-      model = TSNE(n_components=2, random_state=0)
+      model = TSNE(n_components=2, random_state=0, learning_rate=200)
       np.set_printoptions(suppress=True)
       return model.fit_transform( np.array(image_vectors) )
 
     elif self.method == 'umap':
       print(' * UMAP')
-      model = UMAP(n_neighbors=10, min_dist=0.00001, metric='correlation')
+      model = UMAP(n_neighbors=25, min_dist=0.01, metric='correlation')
       return model.fit_transform( np.array(image_vectors) )
 
 

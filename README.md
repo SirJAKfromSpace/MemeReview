@@ -1,4 +1,5 @@
-# MemeReview PixPlot
+# MemeReview
+# Authors: Jawad Aziz Khan, Abir Rahman, Taufiqur Rahman
 
 This contains code that can be used to visualize tens of thousands of images in a two-dimensional projection within which similar images are clustered together. The image analysis uses Tensorflow's Inception bindings, and the visualization layer uses a custom WebGL viewer.
 
