@@ -1,7 +1,7 @@
 import json
 from pprint import pprint
 
-with open('jsons\db.json') as f:
+with open('preprocess/data/original.json') as f:
     data = json.load(f)
 
 for i in range(1,10):
