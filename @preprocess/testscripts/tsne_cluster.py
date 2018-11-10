@@ -6,7 +6,7 @@ import glob, json, os
 vector_files = []
 image_vectors = []
 chart_data = []
-maximum_imgs = 500
+maximum_imgs = 3300
 
 # build a list of image vectors
 vector_files = glob.glob('image_vectors/*.npz')[:maximum_imgs]
@@ -19,14 +19,16 @@ print('building tsne model')
 model = TSNE(n_components=2, random_state=0)
 np.set_printoptions(suppress=True)
 fit_model = model.fit_transform( np.array(image_vectors) )
- 
+print('model built')
+
 # store the coordinates of each image in the chart data
+print('')
 for c, i in enumerate(fit_model):
-  image_name = os.path.basename(vector_files[c]).replace('.npz', '') 
+  image_name = os.path.basename(vector_files[c]).replace('.npz', '')
   chart_data.append({
     'image': os.path.join('images', image_name),
-    'x': i[0],
-    'y': i[1]
+    'x': float(i[0]),
+    'y': float(i[1])
   })
 
 with open('image_tsne_projections.json', 'w') as out:
