@@ -1,13 +1,14 @@
+@memes_original/
 memes_original/
-
 memes_postprocess/
-
 image_vectors/
-image_vectors\
+nearest_neighbors/
+thumbs/
 
 .idea/
 
 memes/
+
 ~(clusters)
 
 *.npz
@@ -31,4 +32,15 @@ Cluster 17
 Cluster 18
 Cluster 19
 Cluster 20
+
+
+data/
+atlas_files/
+.DS_Store
+*.pem
+*.swp
+
+*.npz
+
+Thumbs.db
 

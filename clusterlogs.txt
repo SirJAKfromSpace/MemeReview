@@ -1,0 +1,19 @@
+UMAP ##########################
+
+n=25, dist=0.00001, 12 identified
+1, 5, 7, 13, 15, 19, 20 = screenshots, messages, twitter, textboxpic, forums
+8, 9, 12 = cartoons, spiderman, spongebob, scooby, simpsons
+10 = personalities, famous, presidents
+17 = stock, couple
+------------------------------
+
+n=25, dist=0.1, 14 identified
+1, 3, 17 = textboxpic
+4 = personalities
+5, 12, 14, 20= cartoons, spongebob, spiderman
+6 = gru
+7, 16, 18, 19 = screenshots, forums
+8 = stock, couple
+------------------------------
+
+n=10, dist=0.1, identified
