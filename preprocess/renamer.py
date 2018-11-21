@@ -42,8 +42,3 @@ for source_name in files:
     target_name = os.path.join(path, '{}{}'.format(find_meme_name(data, basename), ext))
     print(target_name)
     os.rename(source_name, target_name)
-
-
-
-
-

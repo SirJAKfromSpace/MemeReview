@@ -1,5 +1,5 @@
-from datetime import datetime
 import json
+from datetime import datetime
 from pprint import pprint
 
 
@@ -48,6 +48,6 @@ def format_data(file):
 
     with open('data/postprocessed.json', 'w') as outfile:
         json.dump(data, outfile)
-     
+
 
 format_data('data/original.json')  # location to your json file
