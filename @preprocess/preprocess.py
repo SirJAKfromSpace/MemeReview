@@ -4,12 +4,12 @@ from pprint import pprint
 
 
 def local_time(ts):
-    """" Converts UTC to readable time."""
+    """ Converts UTC to readable time."""
     return datetime.utcfromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S')
 
 
 def clean_data(file):
-    """" Removes unnecessary data and formats data accordingly """
+    """ Removes unnecessary data and formats data accordingly. """
     data = []
 
     with open(file) as f:
@@ -28,7 +28,7 @@ def clean_data(file):
 
 
 def format_data(file):
-    """" Formats the json data. """
+    """ Formats the json data. """
     data = []
 
     with open(file) as f:
