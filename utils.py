@@ -60,7 +60,8 @@ def selective_move():
 
         for v in image_meta:
             try:
-                shutil.move(f'preprocess/data/memes/{v["filename"]}', f'{dest}')
+                shutil.move(f'preprocess/data/memes/{v["filename"]}.jpg', f'{dest}')
+                print("moving", v["filename"])
             except FileNotFoundError:
                 print(f'{v["filename"]} does not exist in source folder')
             except FileExistsError:
