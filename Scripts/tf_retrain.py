@@ -16,7 +16,11 @@
 # and modified to use TensorFlow Hub modules.
 
 # pylint: disable=line-too-long
-r"""Simple transfer learning with image modules from TensorFlow Hub.
+
+# python tf_retrain.py --image_dir=
+# then drag and drop meme root folder into cmd
+
+"""Simple transfer learning with image modules from TensorFlow Hub.
 
 This example shows how to train an image classifier based on any
 TensorFlow Hub module that computes image feature vectors. By default,
@@ -228,6 +232,12 @@ def create_image_lists(image_dir, testing_percentage, validation_percentage):
         'testing': testing_images,
         'validation': validation_images,
     }
+    # make sure none of the list is empty, otherwise it will raise an error
+    # when validating / testing
+    if validation_percentage > 0 and not validation_images:
+      validation_images.append(training_images.pop())
+    if testing_percentage > 0 and not testing_images:
+      testing_images.append(training_images.pop())
   return result
 
 
@@ -255,8 +265,7 @@ def get_image_path(image_lists, label_name, index, image_dir, category):
     tf.logging.fatal('Category does not exist %s.', category)
   category_list = label_lists[category]
   if not category_list:
-    tf.logging.fatal('Label %s has no images in the category %s.',
-                     label_name, category)
+    tf.logging.fatal('Label "%s" has no images in the category: %s.', label_name, category)
   mod_index = index % len(category_list)
   base_name = category_list[mod_index]
   sub_dir = label_lists['dir']

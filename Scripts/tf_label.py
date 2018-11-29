@@ -13,6 +13,10 @@
 # limitations under the License.
 # ==============================================================================
 
+# COMMAND TO USE LABELING AFTER TRAINING
+# python tf_label.py --graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt --input_layer=Placeholder --output_layer=final_result --image=
+#THEN DRAG AND DROP IMAGE ONTO CMD PROMPT FOR image=
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -137,4 +141,4 @@ if __name__ == "__main__":
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
   for i in top_k:
-    print(i, labels[i], results[i])
+    print('Category ',i,':', labels[i],'meme, I am', "%.2f" % (results[i]*100),'% sure')
