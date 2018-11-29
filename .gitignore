@@ -8,33 +8,24 @@ thumbs/
 .idea/
 
 memes/
+memes - Copy/
+
+@RetrainNotebook/
+@retrainFlowers/
+
+vgg16_weights.h5
 
 ~(clusters)
 
 *.npz
-Cluster 1
-Cluster 2
-Cluster 3
-Cluster 4
-Cluster 5
-Cluster 6
-Cluster 7
-Cluster 8
-Cluster 9
-Cluster 10
-Cluster 11
-Cluster 12
-Cluster 13
-Cluster 14
-Cluster 15
-Cluster 16
-Cluster 17
-Cluster 18
-Cluster 19
-Cluster 20
 
+type1
+type2
+type3
+type4
+type5
+type6
 
-data/
 atlas_files/
 .DS_Store
 *.pem
@@ -43,4 +34,4 @@ atlas_files/
 *.npz
 
 Thumbs.db
-
+*.db
