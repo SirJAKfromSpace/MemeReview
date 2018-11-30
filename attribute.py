@@ -6,7 +6,8 @@ from glob import glob
 def add_meme_type():
     """  Adds the type of meme attribute to the target json """
 
-    target_file = 'meme_metadata.json'
+    target_file = 'postprocessed.json'
+    new_file = 'meme_metadata.json'
     with open(target_file) as f:
         target = json.load(f)
 
@@ -27,14 +28,14 @@ def add_meme_type():
 
             for i in target:
                 if i['id'] == file_path:
-                    i["type"] = folder.split('memes\\')[1]
+                    i['type'] = folder.split('memes\\')[1]
 
     print(target)
 
     print("Press any key to write changes?")
     n = input()
     if n is not None:
-        f = open(target_file, "w")
+        f = open(new_file, "w")
         json.dump(target, f)
 
 
@@ -54,4 +55,3 @@ def clean_json():
 
 add_meme_type()
 clean_json()
-
