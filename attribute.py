@@ -1,4 +1,5 @@
 import json
+import pprint
 from glob import glob
 
 
@@ -37,4 +38,20 @@ def add_meme_type():
         json.dump(target, f)
 
 
-add_meme_type()  # run
+def clean_json():
+    json_obj = []
+    target_file = 'meme_metadata.json'
+    with open(target_file) as f:
+        target = json.load(f)
+
+        for i in target:
+            if 'type' in i:
+                json_obj.append(i)
+
+    f = open(target_file, "w")
+    json.dump(json_obj, f)
+
+
+add_meme_type()
+clean_json()
+
