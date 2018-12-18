@@ -5,7 +5,7 @@
 # It has been obtained by directly converting the [Caffe model](https://gist.github.com/ksimonyan/211839e770f7b538e2d8#file-readme-md) provived by the authors.
 #
 # Details about the network architecture can be found in the following arXiv paper:
-# 
+#
 #     Very Deep Convolutional Networks for Large-Scale Image Recognition
 #     K. Simonyan, A. Zisserman
 #     arXiv:1409.1556
@@ -91,4 +91,4 @@ if __name__ == "__main__":
     sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(optimizer=sgd, loss='categorical_crossentropy')
     out = model.predict(im)
-    print np.argmax(out)
+    print (np.argmax(out))

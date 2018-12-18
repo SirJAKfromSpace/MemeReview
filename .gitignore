@@ -8,6 +8,7 @@ thumbs/
 .idea/
 
 memes/
+memes_val/
 memes - Copy/
 
 @RetrainNotebook/
@@ -35,7 +36,9 @@ atlas_files/
 *.swp
 
 *.npz
+*.h5
 
 Thumbs.db
 *.db
 *.rar
+*.zip
